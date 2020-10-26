@@ -47,8 +47,8 @@ class IssueClient {
     ].join("\n");
 
     // Create issue
-    return github.issues.create(
-        repo.toSlug(), IssueRequest(title: title, body: body, labels: ["bug"]));
+    return github.issues.create(repo.toSlug(),
+        IssueRequest(title: title, body: body, labels: ["user submitted"]));
   }
 
   /// Returns a string describing the device details in a readable form.

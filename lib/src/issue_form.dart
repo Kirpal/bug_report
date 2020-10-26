@@ -70,10 +70,6 @@ class _IssueFormState extends State<IssueForm> {
     height: 30,
   );
 
-  InputDecoration _inputDecoration = InputDecoration(
-      contentPadding: EdgeInsets.all(5),
-      border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)));
-
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -95,7 +91,6 @@ class _IssueFormState extends State<IssueForm> {
               ),
               _headerSpace,
               TextFormField(
-                decoration: _inputDecoration,
                 onSaved: (newValue) => title = newValue.trim(),
                 validator: (value) {
                   return value.isEmpty ? 'This field is required' : null;
@@ -116,7 +111,6 @@ class _IssueFormState extends State<IssueForm> {
               _headerSpace,
               TextFormField(
                 maxLines: 5,
-                decoration: _inputDecoration,
                 onSaved: (newValue) => description = newValue.trim(),
                 validator: (_) => null,
               ),
