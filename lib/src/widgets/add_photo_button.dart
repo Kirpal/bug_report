@@ -12,7 +12,7 @@ class AddPhotoButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(7)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
       onPressed: onPressed,
       child: Row(
         mainAxisSize: MainAxisSize.min,

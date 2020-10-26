@@ -70,10 +70,13 @@ class _IssueFormState extends State<IssueForm> {
     height: 30,
   );
 
+  InputDecoration _inputDecoration = InputDecoration(
+      contentPadding: EdgeInsets.all(5),
+      border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)));
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Form(
+    return Form(
       key: _formKey,
       child: SingleChildScrollView(
         physics: ClampingScrollPhysics(),
@@ -92,9 +95,7 @@ class _IssueFormState extends State<IssueForm> {
               ),
               _headerSpace,
               TextFormField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0))),
+                decoration: _inputDecoration,
                 onSaved: (newValue) => title = newValue.trim(),
                 validator: (value) {
                   return value.isEmpty ? 'This field is required' : null;
@@ -115,9 +116,7 @@ class _IssueFormState extends State<IssueForm> {
               _headerSpace,
               TextFormField(
                 maxLines: 5,
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0))),
+                decoration: _inputDecoration,
                 onSaved: (newValue) => description = newValue.trim(),
                 validator: (_) => null,
               ),
@@ -147,7 +146,7 @@ class _IssueFormState extends State<IssueForm> {
           ),
         ),
       ),
-    ));
+    );
   }
 
   /// Displays the list of uploaded photos.

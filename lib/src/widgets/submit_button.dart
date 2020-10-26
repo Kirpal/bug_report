@@ -15,18 +15,13 @@ class SubmitButton extends StatelessWidget {
       width: double.infinity,
       child: MaterialButton(
         height: MediaQuery.of(context).size.height * 0.06,
-        color: Colors.grey.shade300,
-        elevation: 3.0,
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        color: Color(0xff367ad3),
         onPressed: onPressed,
         child: RichText(
           text: TextSpan(
             text: 'Submit',
             style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontSize: 22.0),
+                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
           ),
         ),
       ),
